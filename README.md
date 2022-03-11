@@ -32,4 +32,10 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
 
     Cada arquivo vai consumir um console que ficara ativo constantemente, isso pode gerar limitações no VS Code, por esse motivo é recomendado que cliente e servidor sejam abertos em janelas difernetes.
 
-   
+    ###### Créditos:
+
+    ###### Desenvolvimento do arquivo:
+    ###### Rafael Costa
+    ###### Vinicius Rosa
+    ###### Resolução de Bugs e suporte dado a equipe:
+    ###### Rodrigo Cruz
