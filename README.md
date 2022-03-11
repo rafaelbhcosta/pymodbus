@@ -36,7 +36,7 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
 
     ###### Desenvolvimento do arquivo:
     ###### Rafael Costa (Jr Data & IoT Enginer)
-    ###### ![Linkedin](https://www.linkedin.com/in/rafaelbhcosta/)
+    ###### [Linkedin](https://www.linkedin.com/in/rafaelbhcosta/)
     ###### Vinicius Rosa (Jr Data & IoT Enginer)
     ###### Resolução de Bugs e suporte dado a equipe:
     ###### Rodrigo Cruz (Senior Data & IoT Enginer)
