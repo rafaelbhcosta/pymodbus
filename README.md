@@ -6,4 +6,6 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
 
 # Sobre os arquivos:
 
-Servidor: o servidor presente nesse arquivo tem como função gerar telemetrias falsas para que posamos usar 100% das funções do cliente
++ Servidor: o servidor presente nesse arquivo tem como função gerar telemetrias falsas para que posamos usar 100% das funções do cliente, sua real função é simular um equipamento de campo gerando dados variaveis.
+
++ Cliente: é onde realmente trabalhamos com o ModBus, onde vamos realizar o envio e requisição de dados
