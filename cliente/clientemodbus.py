@@ -28,10 +28,14 @@ class ClientMODBUS():
             if self._client.is_open():
             
                 while ate:
-                    sel = input(f'Deseja realizar uma leitura, escrita ou configuração? (1- Leitura | 2- Escrita | 3- Tempo de verificação | 4- Sair): ')
+                    print('='*50)
+                    print('Qual função deseja realizar?')
+                    sel = input(f'1- Leitura \n\r2- Escrita \n\r3- Tempo de verificação \n\r4- Sair) \n\rEscolha: ')
                     
                     if sel == '1':
-                        tipo = input(f'Qual tipod de dado deseja ler? (1- Registros 1 (int) | 2- Registros Boleanos | 3- Entrada de registros | 4- Discret Input: ')
+                        print('='*50)
+                        tipo = input(f'Qual tipod de dado deseja ler? \n\r1- Registros 1 (int) \n\r2- Registros Boleanos \n\r3- Entrada de registros \n\r4- Discret Input \n\rEscolha: ')
+                        print('='*50)
                         addr = input(f'Digite o endereço da tabela MODBUS: ')
                         nvezes = input(f'Digite o número de vezes que deseja ler: ')
                         for i in range(0,int(nvezes)):
@@ -39,13 +43,15 @@ class ClientMODBUS():
                             sleep(self._scan_time)
                             
                     elif sel == '2':
-                        tipo = input(f'Qual tipo de dado deseja Escrever? (1- Resgistro Inteiro | 2- Registro Boleano: ')
+                        print('='*50)
+                        tipo = input(f'Qual tipo de dado deseja Escrever? \n\r1- Resgistro Inteiro \n\r2- Registro Boleano \n\rEscolha: ')
                         addr = input(f'Digite o endereço da tabela MODBUS: ')
                         valor = input(f'Digite o valor que vai ser escrito: ')
                         self.escreveDado(int(tipo),int(addr),int(valor))
 
                     elif sel == '3':
-                        scant = input('Digite o tempo de varredura em segundos')
+                        print('='*50)
+                        scant = input('Digite o tempo de varredura em segundos \n\rTempo: ')
                         self._scan_time = float(scant)
 
                     elif sel == '4':
