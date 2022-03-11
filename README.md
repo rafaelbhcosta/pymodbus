@@ -13,3 +13,9 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
 
 
 ### Nomenclaturas usadas
++ R: Usamos o R para simbolizar as linhas de registro do banco de dados
+
+    + R1000 - linha 1000 do banco de dados (registro de formato INT). Usando um gerador de números aleatórios para simular coleta de dados de um dispositivo de campo.
+
+    + R2000 - linha 2000 do banco de dados (registro de formato INT). Registo com valor nulo (0), sua função saber se o recebimento de dados (cliente -> servidor), está funcionando corretamente.
++ C:
