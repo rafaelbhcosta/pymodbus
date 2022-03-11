@@ -1,0 +1,12 @@
+Documento destinado para o registro e controle de atualizações do sistema:
+
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
+
+Notepad 11/10/2022:
+(v Alfa)
+
++ Lançamento completo do arquivo no GitHub.
++ Introduzido um novo layout para o console do cliente.
++ Adicionado arquivo README.md com a ducumentação e instruções de como utilizar o sistema.
+
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
