@@ -1,6 +1,8 @@
 # pymodbusTCP (client-server)
 ###### (Documentação básica)
 
+![](https://logos-download.com/wp-content/uploads/2021/01/Modbus_Organization_Logo.png)
+
 Olá sejá bem vindo(a)(x). Esse documento consiste em dois arquivos básicos para o funcionamento de um ModBus, que um servidor onde estamos gerando dados e um cliente onde estamos lendo esses dados.
 
 Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dados para equipamentos de campo como: termometros, sensores, reguladores e outros.
@@ -29,3 +31,5 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
     Recomendamos que utize o VS Code para executar os arquivos e que abra uma janela para o cliente e uma janela para o servidor. 
 
     Cada arquivo vai consumir um console que ficara ativo constantemente, isso pode gerar limitações no VS Code, por esse motivo é recomendado que cliente e servidor sejam abertos em janelas difernetes.
+
+   
