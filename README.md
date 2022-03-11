@@ -15,10 +15,13 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
 ### Nomenclaturas usadas
 + R: Usamos o R para simbolizar as linhas de registro do banco de dados (INT)
 
-    + R1000 - linha 1000 do banco de dados (registro de formato INT). Usando um gerador de números aleatórios para simular coleta de dados de um dispositivo de campo.
+    + **R1000** - linha 1000 do banco de dados (registro de formato INT). Usando um gerador de números aleatórios para simular coleta de dados de um dispositivo de campo.
 
-    + R2000 - linha 2000 do banco de dados (registro de formato INT). Registo com valor nulo (0), sua função saber se o recebimento de dados (cliente -> servidor), está funcionando corretamente.
+    + **R2000** - linha 2000 do banco de dados (registro de formato INT). Registo com valor nulo (0), sua função saber se o recebimento de dados (cliente -> servidor), está funcionando corretamente.
 
 + C: Usamos o C para simbolizar as linhas de coil do banco de dados (BOOLEAN)
 
-    + C3000 - linha 3000 do banco de dados (registro de formato BOOLEAN). Quando o servidor da start seu valor é nulo (0), ou seja, False. Ao sobre escrever essa linha com o valor um (1) ele é alterado para True.
+    + **C3000** - linha 3000 do banco de dados (registro de formato BOOLEAN). Quando o servidor da start seu valor é nulo (0), ou seja, False. Ao sobre escrever essa linha com o valor um (1) ele é alterado para True.
+
+
+    ## Garantindo o pleno funcionamento dos testes:
