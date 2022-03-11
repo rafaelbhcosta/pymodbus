@@ -34,7 +34,7 @@ class ClientMODBUS():
                     
                     if sel == '1':
                         print('='*50)
-                        tipo = input(f'Qual tipod de dado deseja ler? \n\r1- Registros 1 (int) \n\r2- Registros Boleanos \n\r3- Entrada de registros \n\r4- Discret Input \n\rEscolha: ')
+                        tipo = input(f'Qual tipod de dado deseja ler? \n\r1- Registros (int) \n\r2- Registros Boleanos \n\r3- Entrada de registros \n\r4- Discret Input \n\rEscolha: ')
                         print('='*50)
                         addr = input(f'Digite o endereço da tabela MODBUS: ')
                         nvezes = input(f'Digite o número de vezes que deseja ler: ')
