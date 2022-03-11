@@ -30,7 +30,7 @@ class ClientMODBUS():
                 while ate:
                     print('='*50)
                     print('Qual função deseja realizar?')
-                    sel = input(f'1- Leitura \n\r2- Escrita \n\r3- Tempo de verificação \n\r4- Sair) \n\rEscolha: ')
+                    sel = input(f'1- Leitura \n\r2- Escrita \n\r3- Tempo de verificação \n\r4- Sair \n\rEscolha: ')
                     
                     if sel == '1':
                         print('='*50)
@@ -59,6 +59,7 @@ class ClientMODBUS():
                         ate = False
                         print('='*50)
                         print('Cliente encerrado com sucesso')
+                        print('='*50)
 
                     else:
                         print('='*50)
