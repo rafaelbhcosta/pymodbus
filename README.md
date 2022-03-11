@@ -35,7 +35,7 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
     ###### Créditos:
 
     ###### Desenvolvimento do arquivo:
-    ###### Rafael Costa (Jr Data Enginer)
-    ###### Vinicius Rosa
+    ###### Rafael Costa (Jr Data & IoT Enginer)
+    ###### Vinicius Rosa (Jr Data & IoT Enginer)
     ###### Resolução de Bugs e suporte dado a equipe:
-    ###### Rodrigo Cruz
+    ###### Rodrigo Cruz **(Senior Data & IoT Enginer)**
