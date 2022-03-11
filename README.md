@@ -25,3 +25,7 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
 
 
     ## Garantindo o pleno funcionamento dos testes:
+
+    Recomendamos que utize o VS Code para executar os arquivos e que abra uma janela para o cliente e uma janela para o servidor. 
+
+    Cada arquivo vai consumir um console que ficara ativo constantemente, isso pode gerar limitações no VS Code, por esse motivo é recomendado que cliente e servidor sejam abertos em janelas difernetes.
