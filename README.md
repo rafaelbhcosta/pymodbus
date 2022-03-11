@@ -5,3 +5,5 @@ Olá sejá bem vindo(a)(x). Esse documento consiste em dois arquivos básicos pa
 Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dados para equipamentos de campo como: termometros, sensores, reguladores e outros.
 
 # Sobre os arquivos:
+
+Servidor: o servidor presente nesse arquivo tem como função gerar telemetrias falsas para que posamos usar 100% das funções do cliente
