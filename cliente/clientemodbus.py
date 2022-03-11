@@ -57,8 +57,11 @@ class ClientMODBUS():
                     elif sel == '4':
                         self._client.close()
                         ate = False
+                        print('='*50)
+                        print('Cliente encerrado com sucesso')
 
                     else:
+                        print('='*50)
                         print('Erro seletor escolhido invalido')
                 
             else:
