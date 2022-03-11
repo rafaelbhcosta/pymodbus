@@ -23,7 +23,7 @@ class ServidorMODBUS:
                 print('=' * 20)
                 print("tabela Modbus")
                 print(f'Holding Register \r\n R1000: {self._db.get_words(1000)} \r\n R2000: {self._db.get_words(2000)}')
-                print(f'Coil \r\n C1000: {self._db.get_bits(1000)}')
+                print(f'Coil \r\n C3000: {self._db.get_bits(3000)}')
                 sleep(1)
         except Exception as e:
             print("Erro: ", e.args)
