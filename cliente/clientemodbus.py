@@ -1,8 +1,7 @@
 from pyModbusTCP.client import ModbusClient
+from pyModbusTCP import utils
 from time import sleep
 
-# atendimento = True
-# print('atendimento: ', atendimento)
 
 class ClientMODBUS():
     #Definições de class ClienteMODBUS
@@ -15,6 +14,7 @@ class ClientMODBUS():
     def atendimento(self):
 
         try:
+            
             #Inicialização do cliente
             self._client.open()
         
@@ -34,20 +34,64 @@ class ClientMODBUS():
                     
                     if sel == '1':
                         print('='*50)
-                        tipo = input(f'Qual tipod de dado deseja ler? \n\r1- Registros (int) \n\r2- Registros Boleanos \n\r3- Entrada de registros \n\r4- Discret Input \n\rEscolha: ')
+                        tipo = input(f'Qual tipod de dado deseja ler? \n\r1- Registros (int) \n\r2- Registros Boleanos \n\r3- Entrada de registros \n\r4- Discret Input \n\r5- Registros Float \n\rEscolha: ')
                         print('='*50)
-                        addr = input(f'Digite o endereço da tabela MODBUS: ')
-                        nvezes = input(f'Digite o número de vezes que deseja ler: ')
-                        for i in range(0,int(nvezes)):
-                            print(f'Leitura {i+1}: {self.lerdado(int(tipo), int(addr))}')
-                            sleep(self._scan_time)
+                        if tipo == '1':
+                            addr = input(f'Digite o endereço da tabela MODBUS: ')
+                            nvezes = input(f'Digite o número de vezes que deseja ler: ')
+                            for i in range(0,int(nvezes)):
+                                print(f'Leitura {i+1}: {self.lerdado(int(tipo), int(addr))}')
+                                sleep(self._scan_time)
+
+                        elif tipo == '2':
+                            addr = input(f'Digite o endereço da tabela MODBUS: ')
+                            nvezes = input(f'Digite o número de vezes que deseja ler: ')
+                            for i in range(0,int(nvezes)):
+                                print(f'Leitura {i+1}: {self.lerdado(int(tipo), int(addr))}')
+                                sleep(self._scan_time)
+
+                        elif tipo == '3':
+                            addr = input(f'Digite o endereço da tabela MODBUS: ')
+                            nvezes = input(f'Digite o número de vezes que deseja ler: ')
+                            for i in range(0,int(nvezes)):
+                                print(f'Leitura {i+1}: {self.lerdado(int(tipo), int(addr))}')
+                                sleep(self._scan_time)
+
+                        elif tipo == '4':
+                            addr = input(f'Digite o endereço da tabela MODBUS: ')
+                            nvezes = input(f'Digite o número de vezes que deseja ler: ')
+                            for i in range(0,int(nvezes)):
+                                print(f'Leitura {i+1}: {self.lerdado(int(tipo), int(addr))}')
+                                sleep(self._scan_time)
+
+                        elif tipo == '5':
+                            addr = input(f'Digite o endereço da tabela MODBUS: ')
+                            nvezes = input(f'Digite o número de vezes que deseja ler: ')
+                            r = addr
+                            for i in range(0,int(nvezes)):
+                                float_l = self.lerdadofloat(int(tipo), int(addr))
+                                r = float(float_l[0])
+                                print(f'Leitura {i+1}: {r :.2f}')
+                                sleep(self._scan_time)
                             
                     elif sel == '2':
                         print('='*50)
-                        tipo = input(f'Qual tipo de dado deseja Escrever? \n\r1- Resgistro Inteiro \n\r2- Registro Boleano \n\rEscolha: ')
-                        addr = input(f'Digite o endereço da tabela MODBUS: ')
-                        valor = input(f'Digite o valor que vai ser escrito: ')
-                        self.escreveDado(int(tipo),int(addr),int(valor))
+                        tipo = input(f'Qual tipo de dado deseja Escrever? \n\r1- Resgistro Inteiro \n\r2- Registro Boleano \n\r3- Registro Float \n\rEscolha: ')
+                        if tipo == '1':
+                            addr = input(f'Digite o endereço da tabela MODBUS: ')
+                            valor = input(f'Digite o valor que vai ser escrito: ')
+                            self.escreveDado(int(tipo),int(addr),int(valor))
+
+                        elif tipo == '2':
+                            addr = input(f'Digite o endereço da tabela MODBUS: ')
+                            valor = input(f'Digite o valor que vai ser escrito: ')
+                            self.escreveDado(int(tipo),int(addr),int(valor))
+
+                        elif tipo == '3':
+                            addr = input(f'Digite o endereço da tabela MODBUS: ')
+                            valor = input(f'Digite o valor que vai ser escrito: ')
+                            z = float(valor)
+                            self.escreveDadoFloat(int(tipo),int(addr), [z])
 
                     elif sel == '3':
                         print('='*50)
@@ -70,9 +114,12 @@ class ClientMODBUS():
 
         except Exception as e:
             print('Erro: ',e.args)
+
+    # --------------------------------------------------------------
+    # Conjunto 1 - Leitura e escrita de dados do tipo inteiros e boleanos
     
     def lerdado(self, tipo, addr):
-        # leitura de um dado da tabela
+        # metodo para leitura de um dado da tabela
         if tipo == 1:
             return self._client.read_holding_registers(addr,1)[0]
         if tipo == 2:
@@ -88,3 +135,23 @@ class ClientMODBUS():
             return self._client.write_single_register(addr,valor)
         if tipo == 2:
             return self._client.write_single_coil(addr,valor)
+        
+
+    # --------------------------------------------------------------
+    # Conjunto 2 - Leitura e escrita de dados do tipo float e dooble
+
+    def lerdadofloat(self, tipo, addr, number=1):
+        if tipo == 5:
+            reg_l = self._client.read_holding_registers(addr, number * 2)
+            if reg_l:
+                return [utils.decode_ieee(f) for f in utils.word_list_to_long(reg_l)]
+            else:
+                return None
+              
+
+    def escreveDadoFloat(self, tipo, addr, floats_list):
+        if tipo == 3:
+            b32_l = [utils.encode_ieee(f) for f in floats_list]
+            b16_l = utils.long_list_to_word(b32_l)
+            return self._client.write_multiple_registers(addr, b16_l)
+    
