@@ -19,3 +19,12 @@ Notepad 14/10/2022:
 + Atualização do menu para interagir com números flutuantes
 
 --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
+
+Notepad 14/10/2022:
+(v 2.1)
+
++ Atualização estética do menu para melhor interação
++ Atualização de novas bibliotecas
++ Correção de bugs
+
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
