@@ -43,6 +43,6 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
 
     ###### ...........................
 
-    ###### Resolução de Bugs e suporte dado a equipe:
+    ###### Supervisão, resolução de Bugs e suporte dado a equipe:
     
     ###### Rodrigo Cruz (Senior Data & IoT Enginer) [Linkedin](https://www.linkedin.com/in/rodrigo-cruz-4b3142160/)
