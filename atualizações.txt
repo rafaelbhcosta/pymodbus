@@ -3,10 +3,17 @@ Documento destinado para o registro e controle de atualizações do sistema:
 --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
 
 Notepad 11/10/2022:
-(v Alfa)
+(v 1.0)
 
 + Lançamento completo do arquivo no GitHub.
 + Introduzido um novo layout para o console do cliente.
 + Adicionado arquivo README.md com a ducumentação e instruções de como utilizar o sistema.
 
 --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
+
+Notepad 14/10/2022:
+(v 2.0)
+
++ Lançamento da função de escrita de números com ponto flutuante
++ Lançamento da função de leitura de números com ponto flutuante
++ Atualização do menu para interagir com números flutuantes
