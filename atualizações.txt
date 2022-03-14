@@ -17,3 +17,5 @@ Notepad 14/10/2022:
 + Lançamento da função de escrita de números com ponto flutuante
 + Lançamento da função de leitura de números com ponto flutuante
 + Atualização do menu para interagir com números flutuantes
+
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
