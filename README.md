@@ -11,7 +11,7 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
 
 + Servidor: o servidor presente nesse arquivo tem como função gerar telemetrias falsas para que posamos usar 100% das funções do cliente, sua real função é simular um equipamento de campo gerando dados variaveis.
 
-+ Cliente: é onde realmente trabalhamos com o ModBus, onde vamos realizar o envio e requisição de dados. Dentro do arquivo **servidormodbus.py** vamos encontrar o print de 3 linhas diferentes de uma tabela R1000, R2000, C3000.
++ Cliente: é onde realmente trabalhamos com o ModBus, onde vamos realizar o envio e requisição de dados. Dentro do arquivo **servidormodbus.py** vamos encontrar o print de 3 linhas diferentes de uma tabela R1000, R2000, C3000 e F4000.
 
 
 ### Nomenclaturas usadas
@@ -25,6 +25,9 @@ Na dia a dia iremos usar apenas o cliente para fazer requisição e envio de dad
 
     + **C3000** - linha 3000 do banco de dados (registro de formato BOOLEAN). Quando o servidor da start seu valor é nulo (0), ou seja, False. Ao sobre escrever essa linha com o valor um (1) ele é alterado para True.
 
++ F: Usamos o F para simbolizar as linhas de números com pontos flutuantes do banco de dados (FLOAT)
+
+    + **F4000** - linha 4000 do banco de dados (registro de formato FLOAT). Registo com valor nulo (0), sua função saber se o recebimento de dados (cliente -> servidor), está funcionando corretamente, podendo registrar e ler números flutuantes nessa linha.
 
     ## Garantindo o pleno funcionamento dos testes:
 
