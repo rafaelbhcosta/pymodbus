@@ -1,0 +1,30 @@
+Olá!
+
+Se você chegou até aqui é porque baixou o repositório e precisa de algumas instruções, vamos lá:
+
+Vamos trabalhar com duas partes aqui: servidor e cliente.
+
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
+
+Servidor
+
+O servidor não tem mistério nenhum, ele é apenas um sistema simples com um banco de dados temporario da própria biblioteca ModBusTCP, um gerador de números aleatórios e a impressão disso tudo no console de execução.
+
+Para iniciar o servidor é preciso acessar o arquivo main.py na pasta servidor dar run python file.
+
+Se tudo deu certo ele vai começar a imprimir uma mini tabela no console, constituido por:
+
+- R1000: Entrada randomica de valores, serve para aprender como funciona a leitura de valore inteiros pelo cliente.
+- R2000: Sem valor nenhum, server para aprender a escrever dados de valor inteiro pelo cliente.
+
+- C3000: Esse é uma bobina, serve para aprender a registrar e ler boleanos (True(1) e False(0)).
+
+- F4000: Server para entender como funciona a leitura e escrita de números com ponto flutuante.
+
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
+
+Cliente
+
+O cliente na parte do console foi deixada de forma mas auto explicativa possivel, basta ler o menu e executar os comandos para ver o funcionamento do sistema.
+
+O segredo do cliente é ler o arquivo clientemodbus.py onde foi inteiramente comentado para entender o funcionamento de todas as linhas de comando.
