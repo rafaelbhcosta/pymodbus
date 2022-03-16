@@ -21,6 +21,11 @@ Se tudo deu certo ele vai começar a imprimir uma mini tabela no console, consti
 
 - F4000: Server para entender como funciona a leitura e escrita de números com ponto flutuante.
 
+*--*--*--*
+OBS!!!!!
+
+Esse servidor com o tempo pode ser meio limitado, foi criado apenas para fins de estudo, recomendamos fortemente o download do simulador de servidor ModBus da empresa elipse, ele é bem completo com a parte de registros, podendo acompanhar em tempo real registros e boleanos de forma mais dinâmica
+ 
 --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
 
 Cliente
