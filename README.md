@@ -19,7 +19,9 @@ Esse documento consiste em duas pastas com documentos com a mesma finalidade por
 
 #
 
-Dentro de cada pasta podera ser encontrado instruções de como funciona cada documento 
+Dentro de cada pasta podera ser encontrado instruções de como funciona cada documento. É recomendado que para simular o servidor seja usado um simulador de servidor Modbus da empresa [Elipse Software](https://www.elipse.com.br/), que deve ser baixado no site da mesma.
+
+
 ###### Créditos:
 
 ###### ...........................
