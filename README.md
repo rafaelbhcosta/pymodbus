@@ -1,4 +1,4 @@
-# pyModbusTCP & pyModbus (client-server)
+# pyModbusTCP & pyModbus <br>(client-server)
 
 ![](https://logos-download.com/wp-content/uploads/2021/01/Modbus_Organization_Logo.png)
 ###### (Documentação básica do repositório)
@@ -10,7 +10,8 @@ Esse documento consiste em duas pastas com documentos com a mesma finalidade por
 
 #
 
-##### Documentos:
+#### Documentos:
+<br>
 
 * <b>Pasta 1</b>- pyModbusTCP: contém uma biblioteca mais simples, com menos recursos porém mais complexa para poder fazer tudo funcionar, recomendada para iniciantes no mundo do ModBus.
 
