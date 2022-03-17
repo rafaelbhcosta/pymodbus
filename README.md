@@ -15,10 +15,11 @@ Esse documento consiste em duas pastas com documentos com a mesma finalidade por
 
 * <b>Pasta 1</b>- pyModbusTCP: contém uma biblioteca mais simples, com menos recursos porém mais complexa para poder fazer tudo funcionar, recomendada para iniciantes no mundo do ModBus.
 
-* <b>Pasta 2</b> - pyModbus: contém uma biblioteca mais complexa, com mais recursos que atende mais funções para um servidor Modbus, com recursos mais simples mas não tão fáceis de usar, recomendado para pessoas com um nível intermediario de conhecimento em ModbusTCP.
+* <b>Pasta 2</b> - pyModbus: contém uma biblioteca mais complexa, com mais recursos que atende mais funções para um servidor Modbus. Com recursos mais simples mas não tão fáceis de usar, recomendado para pessoas com um nível intermediario de conhecimento em ModbusTCP.
 
 #
 
+Dentro de cada pasta podera ser encontrado instruções de como funciona cada documento 
 ###### Créditos:
 
 ###### ...........................
