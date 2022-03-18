@@ -16,11 +16,11 @@ print('Escolha o tipo que você deseja ler: ')
 escolha = input('1- INT\n2- FLOAT\n3- STR\n4- BOLEANO\n 5-DOOBLE\nEscolha:')
 
 if escolha == '1':
+    
     addr = input('Endereço da tabela: ')
-    #contador = input('Quantidade de leituras: ')
 
     address = int(addr) - 1
-    count   = 500
+    count   = 20
     result  = client.read_holding_registers(address, count,  unit=1)
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
