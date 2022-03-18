@@ -1,6 +1,3 @@
-from tkinter import BooleanVar
-from xmlrpc.client import boolean
-from numpy import bool8
 from pymodbus.constants import Endian
 from pymodbus.payload import BinaryPayloadDecoder
 from pymodbus.payload import BinaryPayloadBuilder
