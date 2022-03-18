@@ -5,11 +5,15 @@ from pymodbus.client.sync import ModbusTcpClient as ModbusClient
 from pymodbus.compat import iteritems
 from collections import OrderedDict
 
-#-------------------------Conexão-------------------------
+#---------------------------------------------------------
+#-----------------------Conexão---------------------------
+#---------------------------------------------------------
 
 client = ModbusClient('127.0.0.1', port=502)
 client.connect()
 
+#---------------------------------------------------------
+#---------------------------------------------------------
 #---------------------------------------------------------
 
 print('Escolha o tipo que você deseja ler: ')
