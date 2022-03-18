@@ -17,7 +17,7 @@ client.connect()
 #---------------------------------------------------------
 
 print('Escolha o tipo que você deseja ler: ')
-escolha = input('1- INT\n2- FLOAT\n3- STR\n4- BOLEANO\n 5-DOOBLE\nEscolha:')
+escolha = input('1- INT\n2- FLOAT\n3- STR\n4- BOLEANO \n5-DOOBLE\nEscolha:')
 
 if escolha == '1':
     print('=' * 70)
@@ -29,7 +29,7 @@ if escolha == '1':
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
     decoded = {
-        'int': decoder.decode_16bit_int(),
+        'int': decoder.decode_64bit_int(),
     }
 
     print("-" * 70)
@@ -48,7 +48,7 @@ if escolha == '2':
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
     decoded = {
-        'float': decoder.decode_64bit_float(),
+        'float': decoder.decode_32bit_float(),
     }
 
     print("-" * 70)
@@ -86,7 +86,7 @@ if escolha == '4':
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
     decoded = {
-        'boleano': decoder.decode_bits(),
+        'boleano': decoder.decode_bits()[0],
     }
 
     print("-" * 70)

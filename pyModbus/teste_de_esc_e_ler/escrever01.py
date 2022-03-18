@@ -32,7 +32,7 @@ if client.connect():
 
     print('Qual função deseja escrever?')
     print('-' *15)
-    func = input('1- INT \n2-FLOAT \n3-STR \n4-BOLEANO \n \n5- DOOBLE \nEscolha: ')
+    func = input('1- INT \n2-FLOAT \n3-STR \n4-BOLEANO \n5- DOOBLE \nEscolha: ')
 
     if func == '1':
         print('=' * 70)
@@ -40,7 +40,7 @@ if client.connect():
         address = int(addr) - 1
         val = input('O valor INT que deve ser escrito: ')
         valor = int(val)
-        builder.add_16bit_int(valor)
+        builder.add_64bit_int(valor)
         payload = builder.to_registers()
         payload = builder.build()
         client.write_registers(address, payload, skip_encode=True, unit=1)
@@ -51,7 +51,7 @@ if client.connect():
         address = int(addr) - 1
         val = input('O valor FLOAT que deve ser escrito: ')
         valor = float(val)
-        builder.add_64bit_float(valor)
+        builder.add_32bit_float(valor)
         payload = builder.to_registers()
         payload = builder.build()
         client.write_registers(address, payload, skip_encode=True, unit=1)
@@ -70,10 +70,10 @@ if client.connect():
         print('=' * 70)
         addr = input('Escolha o endereço da tabela ModBus: ')
         address = int(addr) - 1
-        val = input('Escolha 1 para True ou 0 para FALSE: ')
-        x = int(val)
-        print(x)
-        builder.add_bits([x])
+        val = int(input('Escolha 1 para True ou 0 para FALSE: '))
+        #x = not bool(val)
+        print(val)
+        builder.add_bits([val])
         payload = builder.build()
         client.write_registers(address, payload, skip_encode=True, unit=1)
 
