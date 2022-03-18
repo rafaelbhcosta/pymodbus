@@ -1,3 +1,6 @@
+from tkinter import BooleanVar
+from xmlrpc.client import boolean
+from numpy import bool8
 from pymodbus.constants import Endian
 from pymodbus.payload import BinaryPayloadDecoder
 from pymodbus.payload import BinaryPayloadBuilder
@@ -50,7 +53,7 @@ if client.connect():
         addr = input('Escolha o endereço da tabela ModBus: ')
         address = int(addr) - 1
         val = input('O valor FLOAT que deve ser escrito: ')
-        valor = int(val)
+        valor = float(val)
         builder.add_64bit_float(valor)
         payload = builder.to_registers()
         payload = builder.build()
@@ -70,10 +73,10 @@ if client.connect():
         print('=' * 70)
         addr = input('Escolha o endereço da tabela ModBus: ')
         address = int(addr) - 1
-        val = input('Escolha 1 para True ou 2 para FALSE: ')
-        valor = int(val)
-        builder.add_16bit_int(valor)
-        payload = builder.add_bits([valor])
+        val = input('Escolha 1 para True ou 0 para FALSE: ')
+        x = int(val)
+        print(x)
+        builder.add_bits([x])
         payload = builder.build()
         client.write_registers(address, payload, skip_encode=True, unit=1)
 
