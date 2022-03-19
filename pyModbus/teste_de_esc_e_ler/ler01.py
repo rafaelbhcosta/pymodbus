@@ -47,7 +47,8 @@ if client.connect():
         print("Decoded Data")
         print("-" * 70)
         for name, value in iteritems(decoded):
-            print("%s\t" % name, value)
+            #print("%s\t" % name, value)
+            print(f'{name, value}\t')
 
     if escolha == '2':
         print('=' * 70)
