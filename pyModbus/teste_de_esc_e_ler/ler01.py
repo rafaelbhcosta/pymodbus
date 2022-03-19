@@ -17,13 +17,11 @@ client.connect()
 #---------------------------------------------------------
 
 print('Escolha o tipo que você deseja ler: ')
-escolha = input('1- INT\n2- FLOAT\n3- STR\n4- BOLEANO \n5-DOOBLE\nEscolha:')
+escolha = input('1- INT\n2- FLOAT\n3- STR\n4- BOLEANO \n5- DOOBLE\nEscolha:')
 
 if escolha == '1':
     print('=' * 70)
-    addr = input('Endereço da tabela: ')
-
-    address = int(addr) - 1
+    address = int(input('Endereço da tabela: ')) - 1
     count   = 20
     result  = client.read_holding_registers(address, count,  unit=1)
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
@@ -40,9 +38,7 @@ if escolha == '1':
 
 if escolha == '2':
     print('=' * 70)
-    addr = input('Endereço da tabela: ')
-
-    address = int(addr) - 1
+    address = int(input('Endereço da tabela: ')) - 1
     count   = 20
     result  = client.read_holding_registers(address, count,  unit=1)
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
@@ -59,9 +55,7 @@ if escolha == '2':
 
 if escolha == '3':
     print('=' * 70)
-    addr = input('Endereço da tabela: ')
-
-    address = int(addr) - 1
+    address = int(input('Endereço da tabela: ')) - 1
     count   = 20
     result  = client.read_holding_registers(address, count,  unit=1)
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
@@ -78,9 +72,7 @@ if escolha == '3':
 
 if escolha == '4':
     print('=' * 70)
-    addr = input('Endereço da tabela: ')
-
-    address = int(addr) - 1
+    address = int(input('Endereço da tabela: ')) - 1
     count   = 20
     result  = client.read_holding_registers(address, count,  unit=1)
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
