@@ -103,6 +103,8 @@ if client.connect():
         for name, value in iteritems(decoded):
             print("%s\t" % name, value)
 
+    #---------------------------------------------------------
+
     #Destinado para o dooble
     # if escolha == '5':
     #     print('=' * 70)
