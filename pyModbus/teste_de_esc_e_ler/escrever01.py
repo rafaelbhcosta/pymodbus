@@ -34,6 +34,7 @@ if client.connect():
     print('-' *15)
     func = input('1- INT \n2- FLOAT \n3- STR \n4- BOLEANO \n5- DOOBLE \nEscolha: ')
 
+    #Função para escrita de números inteiros
     if func == '1':
         print('=' * 70)
         address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
@@ -43,6 +44,7 @@ if client.connect():
         payload = builder.build()
         client.write_registers(address, payload, skip_encode=True, unit=1)
 
+    #Função para escrita de números float
     elif func == '2':
         print('=' * 70)
         address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
