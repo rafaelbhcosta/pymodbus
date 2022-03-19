@@ -54,6 +54,7 @@ if client.connect():
         payload = builder.build()
         client.write_registers(address, payload, skip_encode=True, unit=1)
 
+    #Função para escrita de string
     elif func == '3':
         print('=' * 70)
         address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
@@ -63,6 +64,7 @@ if client.connect():
         payload = builder.build()
         client.write_registers(address, payload, skip_encode=True, unit=1)
 
+    #Função para escrita de boleano
     elif func == '4':
         print('=' * 70)
         address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
