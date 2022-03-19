@@ -102,3 +102,8 @@ if client.connect():
         print("-" * 70)
         for name, value in iteritems(decoded):
             print("%s\t" % name, value)
+
+    # if escolha == '4':
+    #     print('=' * 70)
+    #     address = int(input('Endereço da tabela: ')) - 1
+    #     count   = 20
