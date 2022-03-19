@@ -28,6 +28,8 @@ if client.connect():
 
     print('Escolha o tipo que você deseja ler: ')
     escolha = input('1- INT\n2- FLOAT\n3- STR\n4- BOLEANO \n5- DOOBLE\nEscolha:')
+    #Falta adicionar o dooble - opção 5
+    
 
     if escolha == '1':
         print('=' * 70)
