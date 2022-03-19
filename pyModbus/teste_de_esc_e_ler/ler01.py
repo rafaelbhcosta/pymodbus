@@ -26,6 +26,7 @@ if escolha == '1':
     result  = client.read_holding_registers(address, count,  unit=1)
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
+    # Função para leitura de números inteiros
     decoded = {
         'int': decoder.decode_64bit_int(),
     }
@@ -43,6 +44,7 @@ if escolha == '2':
     result  = client.read_holding_registers(address, count,  unit=1)
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
+    # Função para leitura de números com ponto flutuante
     decoded = {
         'float': decoder.decode_32bit_float(),
     }
@@ -60,6 +62,7 @@ if escolha == '3':
     result  = client.read_holding_registers(address, count,  unit=1)
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
+    # Função para leitura de strings
     decoded = {
         'string': decoder.decode_string(4),
     }
@@ -77,6 +80,7 @@ if escolha == '4':
     result  = client.read_holding_registers(address, count,  unit=1)
     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
+    # Função para leitura de valores boleanos
     decoded = {
         'boleano': decoder.decode_bits()[0],
     }
