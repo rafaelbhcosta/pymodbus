@@ -12,7 +12,7 @@ from collections import OrderedDict
 client = ModbusClient('127.0.0.1', port=502)
 client.connect()
 
-combos = [(wo, bo) for wo in [Endian.Big, Endian.Little] for bo in [Endian.Big, Endian.Little]]
+#combos = [(wo, bo) for wo in [Endian.Big, Endian.Little] for bo in [Endian.Big, Endian.Little]]
 
 #---------------------------------------------------------
 #---------------------Teste de Conexão--------------------
