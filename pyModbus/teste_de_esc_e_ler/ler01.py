@@ -53,8 +53,9 @@ if client.connect():
     if escolha == '2':
         print('=' * 70)
         address = int(input('Endereço da tabela: ')) - 1
-        count   = 20
+        count   = 5
         result  = client.read_holding_registers(address, count,  unit=1)
+        print(result.registers)
         decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
         # Função para leitura de números com ponto flutuante
