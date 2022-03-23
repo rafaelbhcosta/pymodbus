@@ -47,7 +47,7 @@ class FloatModbusClient(ModbusClient):
         return self.write_multiple_registers(address, b16_l)
 
 
-c = FloatModbusClient(host='127.0.0.1', port=502, auto_open=True)
+c = FloatModbusClient(host='20.110.224.187', port=502, auto_open=True)
 
 x = input('Escolha um valor para registro: ')
 z = float(x)
