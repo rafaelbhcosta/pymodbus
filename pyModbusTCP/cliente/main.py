@@ -1,4 +1,4 @@
 from clientemodbus import ClientMODBUS
 
-c = ClientMODBUS('127.0.0.1',502)
+c = ClientMODBUS('179.118.159.226',502)
 c.atendimento()
