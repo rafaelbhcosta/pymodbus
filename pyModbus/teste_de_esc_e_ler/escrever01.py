@@ -1,3 +1,4 @@
+from ipaddress import ip_address
 from pymodbus.constants import Endian
 from pymodbus.payload import BinaryPayloadDecoder
 from pymodbus.payload import BinaryPayloadBuilder
@@ -9,7 +10,7 @@ from collections import OrderedDict
 #-----------------------Conexão---------------------------
 #---------------------------------------------------------
 
-client = ModbusClient('127.0.0.1', port=502)
+client = ModbusClient('20.110.224.187', port=502)
 client.connect()
 
 #---------------------------------------------------------
