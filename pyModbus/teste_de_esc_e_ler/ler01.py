@@ -34,7 +34,7 @@ if client.connect():
     if escolha == '1':
         print('=' * 70)
         address = int(input('Endereço da tabela: ')) - 1
-        count   = 20
+        count   = 4
         result  = client.read_holding_registers(address, count,  unit=1)
         decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
@@ -53,7 +53,7 @@ if client.connect():
     if escolha == '2':
         print('=' * 70)
         address = int(input('Endereço da tabela: ')) - 1
-        count   = 5
+        count   = 2
         result  = client.read_holding_registers(address, count,  unit=1)
         print(result.registers)
         decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
@@ -72,13 +72,13 @@ if client.connect():
     if escolha == '3':
         print('=' * 70)
         address = int(input('Endereço da tabela: ')) - 1
-        count   = 20
+        count   = 3
         result  = client.read_holding_registers(address, count,  unit=1)
         decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
         # Função para leitura de strings
         decoded = {
-            'string': decoder.decode_string(4),
+            'string': decoder.decode_string(6),
         }
 
         print("-" * 70)
@@ -90,7 +90,7 @@ if client.connect():
     if escolha == '4':
         print('=' * 70)
         address = int(input('Endereço da tabela: ')) - 1
-        count   = 20
+        count   = 1
         result  = client.read_holding_registers(address, count,  unit=1)
         decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
