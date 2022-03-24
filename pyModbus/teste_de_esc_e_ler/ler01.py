@@ -75,6 +75,7 @@ if client.connect():
         linha()
         tipo = input('Tipo de bit para leitura:\n1- 16\n2- 32\n3- 64\n')
         
+        # Leitura de valores do tipo 16 bit
         if tipo == '1':
             linha()
             address = int(input('Endereço da tabela: ')) - 1
@@ -83,23 +84,23 @@ if client.connect():
             decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
             print(decoder.decode_16bit_float())
 
-
-        if tipo == '1':
+        # Leitura de valores do tipo 32 bit
+        if tipo == '2':
             linha()
             address = int(input('Endereço da tabela: ')) - 1
-            count   = 1
+            count   = 2
             result = client.read_holding_registers(address, count, unit=1)
             decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
-            print(decoder.decode_16bit_float())
+            print(decoder.decode_32bit_float())
 
-
-        if tipo == '1':
+        # Leitura de valores do tipo 64 bit
+        if tipo == '3':
             linha()
             address = int(input('Endereço da tabela: ')) - 1
-            count   = 1
+            count   = 4
             result = client.read_holding_registers(address, count, unit=1)
             decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
-            print(decoder.decode_16bit_float())
+            print(decoder.decode_64bit_float())
 
     # if escolha == '2':
     #     print('=' * 70)
