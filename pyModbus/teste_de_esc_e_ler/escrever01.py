@@ -40,6 +40,7 @@ if client.connect():
         linha()
         tipo = input('Tipo de bit para escrita:\n1- 16\n2- 32\n3- 64\n')
 
+        # Escrita de valores do tipo 16 bit
         if tipo == '1':
             linha()
             address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
@@ -49,6 +50,7 @@ if client.connect():
             payload = builder.build()
             client.write_registers(address, payload, skip_encode=True, unit=1)
 
+        # Escrita de valores do tipo 32 bit
         elif tipo == '2':
             linha()
             address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
@@ -58,6 +60,7 @@ if client.connect():
             payload = builder.build()
             client.write_registers(address, payload, skip_encode=True, unit=1)
 
+        # Escrita de valores do tipo 64 bit
         elif tipo == '3':
             linha()
             address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
@@ -72,6 +75,7 @@ if client.connect():
         linha()
         tipo = input('Tipo de bit para escrita:\n1- 16\n2- 32\n3- 64\n')
 
+        # Escrita de valores do tipo 16 bit
         if tipo == '1':
             linha()
             address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
@@ -81,6 +85,7 @@ if client.connect():
             payload = builder.build()
             client.write_registers(address, payload, skip_encode=True, unit=1)
 
+        # Escrita de valores do tipo 32 bit
         elif tipo == '2':
             linha()
             address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
@@ -90,6 +95,7 @@ if client.connect():
             payload = builder.build()
             client.write_registers(address, payload, skip_encode=True, unit=1)
 
+        # Escrita de valores do tipo 64 bit
         elif tipo == '3':
             linha()
             address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
