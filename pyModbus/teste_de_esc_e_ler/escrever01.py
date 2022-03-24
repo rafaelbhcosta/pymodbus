@@ -67,7 +67,7 @@ if client.connect():
             payload = builder.build()
             client.write_registers(address, payload, skip_encode=True, unit=1)
 
-    # Tipo de escrita INT
+    # Tipo de escrita FLOAT
     elif escolha == '2':
         linha()
         tipo = input('Tipo de bit para escrita:\n1- 16\n2- 32\n3- 64\n')
