@@ -36,7 +36,7 @@ if client.connect():
 # string 
 
     print('Escolha o tipo que você deseja ler: ')
-    escolha = input('1- INT\n2- FLOAT\n3- STR\n4- BOLEANO \n5- DOOBLE\nEscolha:')
+    escolha = input('1- INT\n2- FLOAT\n3- BOLEANO\n4- STR \n5- DOOBLE\nEscolha:')
     
     # Tipo de leitura INT
     if escolha == '1':
@@ -102,24 +102,14 @@ if client.connect():
             decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
             print(decoder.decode_64bit_float())
 
-    # if escolha == '2':
-    #     print('=' * 70)
-    #     address = int(input('Endereço da tabela: ')) - 1
-    #     count   = 2
-    #     result  = client.read_holding_registers(address, count,  unit=1)
-    #     print(result.registers)
-    #     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
-
-    #     # Função para leitura de números com ponto flutuante
-    #     decoded = {
-    #         'float': decoder.decode_32bit_float(),
-    #     }
-
-    #     print("-" * 70)
-    #     print("Decoded Data")
-    #     print("-" * 70)
-    #     for name, value in iteritems(decoded):
-    #         print("%s\t" % name, value)
+    # Tipo de leitura BOLEANO
+    if escolha == '3':
+        linha()
+        address = int(input('Endereço da tabela: ')) - 1
+        count   = 1
+        result = client.read_holding_registers(address, count, unit=1)
+        decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+        print(decoder.decode_bits()[0])
 
     # if escolha == '3':
     #     print('=' * 70)
