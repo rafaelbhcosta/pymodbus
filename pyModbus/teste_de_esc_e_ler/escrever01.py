@@ -49,7 +49,7 @@ if client.connect():
             payload = builder.build()
             client.write_registers(address, payload, skip_encode=True, unit=1)
 
-        if tipo == '2':
+        elif tipo == '2':
             linha()
             address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
             valor = int(input('O valor INT que deve ser escrito: '))
@@ -58,7 +58,7 @@ if client.connect():
             payload = builder.build()
             client.write_registers(address, payload, skip_encode=True, unit=1)
 
-        if tipo == '3':
+        elif tipo == '3':
             linha()
             address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
             valor = int(input('O valor INT que deve ser escrito: '))
@@ -67,16 +67,38 @@ if client.connect():
             payload = builder.build()
             client.write_registers(address, payload, skip_encode=True, unit=1)
 
-#     #Função para escrita de números inteiros
-#     if func == '1':
-#         print('=' * 70)
-#         address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
-#         valor = int(input('O valor INT que deve ser escrito: '))
-#         builder.add_16bit_int(valor)
-#         payload = builder.to_registers()
-#         payload = builder.build()
-#         client.write_registers(address, payload, skip_encode=True, unit=1)
+    # Tipo de escrita INT
+    elif escolha == '2':
+        linha()
+        tipo = input('Tipo de bit para escrita:\n1- 16\n2- 32\n3- 64\n')
 
+        if tipo == '1':
+            linha()
+            address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
+            valor = float(input('O valor FLOAT que deve ser escrito: '))
+            builder.add_16bit_float(valor)
+            payload = builder.to_registers()
+            payload = builder.build()
+            client.write_registers(address, payload, skip_encode=True, unit=1)
+
+        elif tipo == '2':
+            linha()
+            address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
+            valor = float(input('O valor FLOAT que deve ser escrito: '))
+            builder.add_32bit_float(valor)
+            payload = builder.to_registers()
+            payload = builder.build()
+            client.write_registers(address, payload, skip_encode=True, unit=1)
+
+        elif tipo == '3':
+            linha()
+            address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
+            valor = float(input('O valor FLOAT que deve ser escrito: '))
+            builder.add_64bit_float(valor)
+            payload = builder.to_registers()
+            payload = builder.build()
+            client.write_registers(address, payload, skip_encode=True, unit=1)
+    
 #     #Função para escrita de números float
 #     elif func == '2':
 #         print('=' * 70)
