@@ -35,7 +35,7 @@ if client.connect():
     print('-' *15)
     escolha = input('1- INT \n2- FLOAT \n3- STR \n4- BOLEANO \n5- DOOBLE \nEscolha: ')
 
-    # Tipo de leitura INT
+    # Tipo de escrita INT
     if escolha == '1':
         linha()
         tipo = input('Tipo de bit para escrita:\n1- 16\n2- 32\n3- 64\n')
