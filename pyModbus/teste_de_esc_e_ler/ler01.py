@@ -38,6 +38,7 @@ if client.connect():
     print('Escolha o tipo que você deseja ler: ')
     escolha = input('1- INT\n2- FLOAT\n3- STR\n4- BOLEANO \n5- DOOBLE\nEscolha:')
     
+    # Tipo de leitura INT
     if escolha == '1':
         linha()
         tipo = input('Tipo de bit para leitura:\n1- 16\n2- 32\n3- 64\n')
@@ -68,7 +69,37 @@ if client.connect():
             result = client.read_holding_registers(address, count, unit=1)
             decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
             print(decoder.decode_64bit_int())
+    
+    # Tipo de leitura FLOAT
+    if escolha == '2':
+        linha()
+        tipo = input('Tipo de bit para leitura:\n1- 16\n2- 32\n3- 64\n')
         
+        if tipo == '1':
+            linha()
+            address = int(input('Endereço da tabela: ')) - 1
+            count   = 1
+            result = client.read_holding_registers(address, count, unit=1)
+            decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+            print(decoder.decode_16bit_float())
+
+
+        if tipo == '1':
+            linha()
+            address = int(input('Endereço da tabela: ')) - 1
+            count   = 1
+            result = client.read_holding_registers(address, count, unit=1)
+            decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+            print(decoder.decode_16bit_float())
+
+
+        if tipo == '1':
+            linha()
+            address = int(input('Endereço da tabela: ')) - 1
+            count   = 1
+            result = client.read_holding_registers(address, count, unit=1)
+            decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+            print(decoder.decode_16bit_float())
 
     # if escolha == '2':
     #     print('=' * 70)
