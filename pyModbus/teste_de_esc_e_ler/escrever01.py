@@ -124,5 +124,8 @@ if client.connect():
         payload = builder.build()
         client.write_registers(address, payload, skip_encode=True, unit=1)
 
+    else:
+        print('Erro: Opção selecionada inválida')
+
 else:
     print('Erro: Não foi possivel estabelecer conexão com o servidor')
