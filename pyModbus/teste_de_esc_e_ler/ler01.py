@@ -34,82 +34,90 @@ if client.connect():
 
     print('Escolha o tipo que você deseja ler: ')
     escolha = input('1- INT\n2- FLOAT\n3- STR\n4- BOLEANO \n5- DOOBLE\nEscolha:')
-    #Falta adicionar o dooble - opção 5
-    #O dooble deve set alguma variação em bit da função de float
-
+    
     if escolha == '1':
-        print('=' * 70)
-        address = int(input('Endereço da tabela: ')) - 1
-        count   = 4
-        result  = client.read_holding_registers(address, count,  unit=1)
-        decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+        tipo = input('Tipo de bit para leitura:\n1- 16\n2- 32\n3- 64\n')
 
-        # Função para leitura de números inteiros
-        decoded = {
-            'int': decoder.decode_64bit_int(),
-        }
+        
+        if tipo == '1':
+            print('=' * 70)
+            address = int(input('Endereço da tabela: ')) - 1
+            count   = 1
+            result = client.read_holding_registers(address, count, unit=1)
+            decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+            print(decoder.decode_16bit_int())
 
-        print("-" * 70)
-        print("Decoded Data")
-        print("-" * 70)
-        for name, value in iteritems(decoded):
-            #print("%s\t" % name, value)
-            print(f'{name, value}\t')
+        if tipo == '2':
+            print('=' * 70)
+            address = int(input('Endereço da tabela: ')) - 1
+            count   = 2
+            result = client.read_holding_registers(address, count, unit=1)
+            decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+            print(decoder.decode_32bit_int())
 
-    if escolha == '2':
-        print('=' * 70)
-        address = int(input('Endereço da tabela: ')) - 1
-        count   = 2
-        result  = client.read_holding_registers(address, count,  unit=1)
-        print(result.registers)
-        decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+        if tipo == '3':
+            print('=' * 70)
+            address = int(input('Endereço da tabela: ')) - 1
+            count   = 4
+            result = client.read_holding_registers(address, count, unit=1)
+            decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+            print(decoder.decode_64bit_int())
+        
 
-        # Função para leitura de números com ponto flutuante
-        decoded = {
-            'float': decoder.decode_32bit_float(),
-        }
+    # if escolha == '2':
+    #     print('=' * 70)
+    #     address = int(input('Endereço da tabela: ')) - 1
+    #     count   = 2
+    #     result  = client.read_holding_registers(address, count,  unit=1)
+    #     print(result.registers)
+    #     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
-        print("-" * 70)
-        print("Decoded Data")
-        print("-" * 70)
-        for name, value in iteritems(decoded):
-            print("%s\t" % name, value)
+    #     # Função para leitura de números com ponto flutuante
+    #     decoded = {
+    #         'float': decoder.decode_32bit_float(),
+    #     }
 
-    if escolha == '3':
-        print('=' * 70)
-        address = int(input('Endereço da tabela: ')) - 1
-        count   = 3
-        result  = client.read_holding_registers(address, count,  unit=1)
-        decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+    #     print("-" * 70)
+    #     print("Decoded Data")
+    #     print("-" * 70)
+    #     for name, value in iteritems(decoded):
+    #         print("%s\t" % name, value)
 
-        # Função para leitura de strings
-        decoded = {
-            'string': decoder.decode_string(6),
-        }
+    # if escolha == '3':
+    #     print('=' * 70)
+    #     address = int(input('Endereço da tabela: ')) - 1
+    #     count   = 3
+    #     result  = client.read_holding_registers(address, count,  unit=1)
+    #     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
-        print("-" * 70)
-        print("Decoded Data")
-        print("-" * 70)
-        for name, value in iteritems(decoded):
-            print("%s\t" % name, value)
+    #     # Função para leitura de strings
+    #     decoded = {
+    #         'string': decoder.decode_string(6),
+    #     }
 
-    if escolha == '4':
-        print('=' * 70)
-        address = int(input('Endereço da tabela: ')) - 1
-        count   = 1
-        result  = client.read_holding_registers(address, count,  unit=1)
-        decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
+    #     print("-" * 70)
+    #     print("Decoded Data")
+    #     print("-" * 70)
+    #     for name, value in iteritems(decoded):
+    #         print("%s\t" % name, value)
 
-        # Função para leitura de valores boleanos
-        decoded = {
-            'boleano': decoder.decode_bits()[0],
-        }
+    # if escolha == '4':
+    #     print('=' * 70)
+    #     address = int(input('Endereço da tabela: ')) - 1
+    #     count   = 1
+    #     result  = client.read_holding_registers(address, count,  unit=1)
+    #     decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
 
-        print("-" * 70)
-        print("Decoded Data")
-        print("-" * 70)
-        for name, value in iteritems(decoded):
-            print("%s\t" % name, value)
+    #     # Função para leitura de valores boleanos
+    #     decoded = {
+    #         'boleano': decoder.decode_bits()[0],
+    #     }
+
+    #     print("-" * 70)
+    #     print("Decoded Data")
+    #     print("-" * 70)
+    #     for name, value in iteritems(decoded):
+    #         print("%s\t" % name, value)
 
     #---------------------------------------------------------
 

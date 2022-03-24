@@ -9,7 +9,7 @@ from collections import OrderedDict
 #-----------------------Conexão---------------------------
 #---------------------------------------------------------
 
-client = ModbusClient('20.110.224.187', port=502)
+client = ModbusClient('127.0.0.1', port=502)
 client.connect()
 
 #---------------------------------------------------------
@@ -37,7 +37,7 @@ if client.connect():
         print('=' * 70)
         address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
         valor = int(input('O valor INT que deve ser escrito: '))
-        builder.add_64bit_int(valor)
+        builder.add_16bit_int(valor)
         payload = builder.to_registers()
         payload = builder.build()
         client.write_registers(address, payload, skip_encode=True, unit=1)
