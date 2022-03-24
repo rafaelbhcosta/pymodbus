@@ -33,7 +33,7 @@ if client.connect():
 
     print('Qual função deseja escrever?')
     print('-' *15)
-    escolha = input('1- INT \n2- FLOAT \n3- STR \n4- BOLEANO \n5- DOOBLE \nEscolha: ')
+    escolha = input('1- INT \n2- FLOAT \n3- BOLEANO \n4- STR \n5- ALFANUMERICO \nEscolha: ')
 
     # Tipo de escrita INT
     if escolha == '1':
@@ -99,34 +99,24 @@ if client.connect():
             payload = builder.build()
             client.write_registers(address, payload, skip_encode=True, unit=1)
     
-#     #Função para escrita de números float
-#     elif func == '2':
-#         print('=' * 70)
-#         address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
-#         valor = float(input('O valor FLOAT que deve ser escrito: '))
-#         builder.add_32bit_float(valor)
-#         payload = builder.to_registers()
-#         payload = builder.build()
-#         client.write_registers(address, payload, skip_encode=True, unit=1)
+    # Tipo de escrita BOLEANO
+    elif escolha == '3':
+        linha()
+        address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
+        valor = int(input('Escolha 1 para True ou 0 para FALSE: '))
+        builder.add_bits([valor])
+        payload = builder.build()
+        client.write_registers(address, payload, skip_encode=True, unit=1)
 
-#     #Função para escrita de string
-#     elif func == '3':
-#         print('=' * 70)
-#         address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
-#         valor = input('O que deve ser escrito: ')
-#         builder.add_string(valor)
-#         payload = builder.to_registers()
-#         payload = builder.build()
-#         client.write_registers(address, payload, skip_encode=True, unit=1)
+    # Tipo de escrita STR
+    elif escolha == '4':
+        linha()
+        address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
+        valor = input('O que deve ser escrito (max. 4 letras): ')
+        builder.add_string(valor)
+        payload = builder.to_registers()
+        payload = builder.build()
+        client.write_registers(address, payload, skip_encode=True, unit=1)
 
-#     #Função para escrita de boleano
-#     elif func == '4':
-#         print('=' * 70)
-#         address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
-#         valor = int(input('Escolha 1 para True ou 0 para FALSE: '))
-#         builder.add_bits([valor])
-#         payload = builder.build()
-#         client.write_registers(address, payload, skip_encode=True, unit=1)
-
-# else:
-#     print('Erro: Não foi possivel estabelecer conexão com o servidor')
+else:
+    print('Erro: Não foi possivel estabelecer conexão com o servidor')
