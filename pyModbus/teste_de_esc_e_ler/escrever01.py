@@ -5,6 +5,9 @@ from pymodbus.client.sync import ModbusTcpClient as ModbusClient
 from pymodbus.compat import iteritems
 from collections import OrderedDict
 
+def linha():
+    print('=' * 70)
+    
 #---------------------------------------------------------
 #-----------------------Conexão---------------------------
 #---------------------------------------------------------
@@ -30,9 +33,12 @@ if client.connect():
 
     print('Qual função deseja escrever?')
     print('-' *15)
-    func = input('1- INT \n2- FLOAT \n3- STR \n4- BOLEANO \n5- DOOBLE \nEscolha: ')
+    escolha = input('1- INT \n2- FLOAT \n3- STR \n4- BOLEANO \n5- DOOBLE \nEscolha: ')
 
-
+    # Tipo de leitura INT
+    if escolha == '1':
+        linha()
+        tipo = input('Tipo de bit para leitura:\n1- 16\n2- 32\n3- 64\n')
 
 #     #Função para escrita de números inteiros
 #     if func == '1':
