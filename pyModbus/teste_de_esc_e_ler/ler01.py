@@ -115,3 +115,4 @@ if client.connect():
 
 else:
     print('Erro: Não foi possivel estabelecer conexão com o servidor')
+    
