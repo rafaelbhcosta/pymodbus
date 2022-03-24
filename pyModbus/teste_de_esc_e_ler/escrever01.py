@@ -7,7 +7,7 @@ from collections import OrderedDict
 
 def linha():
     print('=' * 70)
-    
+
 #---------------------------------------------------------
 #-----------------------Conexão---------------------------
 #---------------------------------------------------------
@@ -38,7 +38,34 @@ if client.connect():
     # Tipo de leitura INT
     if escolha == '1':
         linha()
-        tipo = input('Tipo de bit para leitura:\n1- 16\n2- 32\n3- 64\n')
+        tipo = input('Tipo de bit para escrita:\n1- 16\n2- 32\n3- 64\n')
+
+        if tipo == '1':
+            linha()
+            address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
+            valor = int(input('O valor INT que deve ser escrito: '))
+            builder.add_16bit_int(valor)
+            payload = builder.to_registers()
+            payload = builder.build()
+            client.write_registers(address, payload, skip_encode=True, unit=1)
+
+        if tipo == '2':
+            linha()
+            address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
+            valor = int(input('O valor INT que deve ser escrito: '))
+            builder.add_32bit_int(valor)
+            payload = builder.to_registers()
+            payload = builder.build()
+            client.write_registers(address, payload, skip_encode=True, unit=1)
+
+        if tipo == '3':
+            linha()
+            address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
+            valor = int(input('O valor INT que deve ser escrito: '))
+            builder.add_64bit_int(valor)
+            payload = builder.to_registers()
+            payload = builder.build()
+            client.write_registers(address, payload, skip_encode=True, unit=1)
 
 #     #Função para escrita de números inteiros
 #     if func == '1':

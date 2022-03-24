@@ -7,6 +7,7 @@ from collections import OrderedDict
 
 def linha():
     print('=' * 70)
+    
 #---------------------------------------------------------
 #-----------------------Conexão---------------------------
 #---------------------------------------------------------
@@ -115,4 +116,3 @@ if client.connect():
 
 else:
     print('Erro: Não foi possivel estabelecer conexão com o servidor')
-    
