@@ -112,3 +112,6 @@ if client.connect():
         result = client.read_holding_registers(address, count, unit=1)
         decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
         print(decoder.decode_string(4))
+
+else:
+    print('Erro: Não foi possivel estabelecer conexão com o servidor')
