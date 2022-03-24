@@ -1,4 +1,3 @@
-from ipaddress import ip_address
 from pymodbus.constants import Endian
 from pymodbus.payload import BinaryPayloadDecoder
 from pymodbus.payload import BinaryPayloadBuilder

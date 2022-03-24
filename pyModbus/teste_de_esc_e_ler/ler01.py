@@ -26,6 +26,12 @@ if client.connect():
 #---------------------Funções-----------------------------
 #---------------------------------------------------------
 
+# int16, 32 e 64
+# float16, 32 e 64
+# Uint16, 32 e 64
+# bit
+# string 
+
     print('Escolha o tipo que você deseja ler: ')
     escolha = input('1- INT\n2- FLOAT\n3- STR\n4- BOLEANO \n5- DOOBLE\nEscolha:')
     #Falta adicionar o dooble - opção 5
