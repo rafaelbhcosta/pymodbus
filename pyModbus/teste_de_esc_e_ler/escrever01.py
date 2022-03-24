@@ -119,7 +119,7 @@ if client.connect():
         linha()
         address = int(input('Escolha o endereço da tabela ModBus: ')) - 1
         valor = input('O que deve ser escrito (max. 4 letras): ')
-        builder.add_string(valor)
+        builder.add_string(valor) #Valor pré determinado pelo servidor, aqui é só para teste
         payload = builder.to_registers()
         payload = builder.build()
         client.write_registers(address, payload, skip_encode=True, unit=1)

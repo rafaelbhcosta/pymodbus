@@ -112,7 +112,7 @@ if client.connect():
         count   = 2
         result = client.read_holding_registers(address, count, unit=1)
         decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
-        print(decoder.decode_string(4))
+        print(decoder.decode_string(4)) #Valor pré determinado pelo servidor, aqui é só para teste
 
     else:
         print('Erro: Opção selecionada inválida')
