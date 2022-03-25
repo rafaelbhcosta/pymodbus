@@ -1,8 +1,8 @@
 Olá!
 
-Se você chegou até aqui é porque baixou o repositório e precisa de algumas instruções, vamos lá:
+Nessa pasta existe um cliente e um servidor.
 
-Vamos trabalhar com duas partes aqui: servidor e cliente.
+O Servidor existe apenas para fim de simulação, mas recomendamos que baixe o simulador citado no readme inicial.
 
 --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
 
@@ -20,11 +20,6 @@ Se tudo deu certo ele vai começar a imprimir uma mini tabela no console, consti
 - C3000: Esse é uma bobina, serve para aprender a registrar e ler boleanos (True(1) e False(0)).
 
 - F4000: Server para entender como funciona a leitura e escrita de números com ponto flutuante.
-
-*--*--*--*
-OBS!!!!!
-
-Esse servidor com o tempo pode ser meio limitado, foi criado apenas para fins de estudo, recomendamos fortemente o download do simulador de servidor ModBus da empresa elipse, ele é bem completo com a parte de registros, podendo acompanhar em tempo real registros e boleanos de forma mais dinâmica
  
 --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
 
@@ -32,4 +27,4 @@ Cliente
 
 O cliente na parte do console foi deixada de forma mas auto explicativa possivel, basta ler o menu e executar os comandos para ver o funcionamento do sistema.
 
-O segredo do cliente é ler o arquivo clientemodbus.py onde foi inteiramente comentado para entender o funcionamento de todas as linhas de comando.
+O segredo do cliente é debugar (ler) o arquivo clientemodbus.py onde foi inteiramente comentado para entender o funcionamento de todas as linhas de comando.
