@@ -31,6 +31,10 @@ Existem duas formas de estudar o protocolo ModBus, que é pela biblioteca pymodb
 
 ### Pastas
 
+Nesse repositório estamos colocando um modelo TCP apenas para fins de comparação entre os códigos, reforçando o que foi dito que recomendamos apenas a pymodbus.
+
+* OBS: mesmo que o servidor de um cliente seja do modelo pymodbusTCP a biblioteca pymodbus faz as leituras sem problemas, apenas vai ser preciso configurar o cliente para leituras do tipo 32 BIT.
+
 Dentro de cada pasta poderá ser encontrado instruções de como funciona cada documento. É recomendado que para simular o servidor seja usado um simulador de servidor Modbus da empresa [Elipse Software](https://www.elipse.com.br/downloads/), que deve ser baixado no site da mesma.
 
 #
