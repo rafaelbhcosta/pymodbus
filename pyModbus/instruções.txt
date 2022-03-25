@@ -19,3 +19,5 @@ Cada computador pode exigir uma conexão dependendo do sistema operacional, ou v
 
 --==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
 
+Caso tenha dúvidas de como o código está funcionando basta ler a documentação da biblioteca, é bastante coisa
+mas claramente necessário para aprender a usar ela.
