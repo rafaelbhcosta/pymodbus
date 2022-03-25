@@ -11,7 +11,7 @@ Esse documento consiste em um material básico para introdução a biblioteca py
 
 #
 
-#### Programas recomendados:
+### Programas recomendados
 <div>
     <img height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" /> ou  
     <img height="30"src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" />
@@ -20,8 +20,7 @@ Particularmente preferimos usar o vscode por ter mais ferramentas, e como usamos
 
 #
 
-#### Observações:
-<br>
+### Observações
 
 Existem duas formas de estudar o protocolo ModBus, que é pela biblioteca pymodbusTCP ou a pymodbus. 
 
@@ -29,6 +28,8 @@ Existem duas formas de estudar o protocolo ModBus, que é pela biblioteca pymodb
 * A biblioteca pymodbus é a mais completa podendo ler até mesmo STR e valores alfanuméricos, fora que seu código é mais resumido e simples.
 
 #
+
+### Pastas
 
 Dentro de cada pasta poderá ser encontrado instruções de como funciona cada documento. É recomendado que para simular o servidor seja usado um simulador de servidor Modbus da empresa [Elipse Software](https://www.elipse.com.br/downloads/), que deve ser baixado no site da mesma.
 
