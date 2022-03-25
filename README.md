@@ -18,12 +18,15 @@ Esse documento consiste em um material básico para introdução a biblioteca py
 </div>
 Particularmente preferimos usar o vscode por ter mais ferramentas, e como usamos uma VM do Azure o vscode também fornece suporte para uma conexão direta e controle da VM por ele mesmo.
 
+#
+
 #### Observações:
 <br>
 
+Existem duas formas de estudar o protocolo ModBus, que é pela biblioteca pymodbusTCP ou a pymodbus. 
 
-
-* <b>PyModbus:</b> 
+* A biblioteca pymodbusTCP é bastante limitada para ler informações, ela vai servir básicamente para leituras de INT, BOOLEAN e FLOAT.
+* A biblioteca pymodbus é a mais completa podendo ler até mesmo STR e valores alfanuméricos, fora que seu código é mais resumido e simples.
 
 #
 
