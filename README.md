@@ -1,21 +1,28 @@
-# pyModbusTCP & pyModbus <br>(client-server)
+# PyModbus<br>(client-server)
 
-![](https://logos-download.com/wp-content/uploads/2021/01/Modbus_Organization_Logo.png)
+<img src="https://logos-download.com/wp-content/uploads/2021/01/Modbus_Organization_Logo.png" alt="logo do modbus">
+
 ###### (Documentação básica do repositório)
 
 <br>
 
-Olá sejá bem vindo(a)(x). <br>
-Esse documento consiste em duas pastas com documentos com a mesma finalidade porém com bibliotecas diferentes.
+Olá, seja bem vindo(a)(x). <br>
+Esse documento consiste em um material básico para introdução a biblioteca pymodbus.
 
 #
 
-#### Documentos:
+#### Programas recomendados:
+<br>
+<img height="30" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" /> ou <img height="30"src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pycharm/pycharm-original.svg" />
+
+
+
+#### Observações:
 <br>
 
-* <b>Pasta 1</b>- pyModbusTCP: contém uma biblioteca mais simples, com menos recursos porém mais complexa para poder fazer tudo funcionar, recomendada para iniciantes no mundo do ModBus.
 
-* <b>Pasta 2</b> - pyModbus: contém uma biblioteca mais complexa, com mais recursos que atende mais funções para um servidor Modbus. Com recursos mais simples mas não tão fáceis de usar, recomendado para pessoas com um nível intermediario de conhecimento em ModbusTCP.
+
+* <b>PyModbus:</b> 
 
 #
 
