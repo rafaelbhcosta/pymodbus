@@ -1,0 +1,21 @@
+A pasta de escrita e leitura podem ser rodadas direto não precisam de main, 
+mas caso queira criar é só adaptar o documento.
+
+Ambos os scripts estão inteiramente comentados explicando todos as condições.
+
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
+
+Sempre verifique a coneção, se você estiver usando um simulador de servidor modbus no 
+seu computador, ele vai estar rodando em local host, então verifique o endereçamento 
+do script de escrita e leitura 
+
+São três tipos de coneção que determinam que é na sua máquina (local)
+
+'localhost'
+'0.0.0.0'
+'127.0.0.1'
+
+Cada computador pode exigir uma conexão dependendo do sistema operacional, ou versão do sistema.
+
+--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--==--
+
