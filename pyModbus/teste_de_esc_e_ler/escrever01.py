@@ -19,7 +19,7 @@ client.connect()
 #---------------------Teste de Conexão--------------------
 #---------------------------------------------------------
 
-print('=' *70)
+linha()
 if not client.connect():
     if not client.connect():
         pass
