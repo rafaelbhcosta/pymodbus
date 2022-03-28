@@ -55,7 +55,7 @@ if client.connect():
             decoder = BinaryPayloadDecoder.fromRegisters(result.registers)
             print(decoder.decode_32bit_int())
 
-        # Leitura de valores do tipo 32 bit
+        # Leitura de valores do tipo 64 bit
         elif tipo == '3':
             linha()
             address = int(input('Endereço da tabela: ')) - 1
